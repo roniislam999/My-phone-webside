@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class=" text-black-300 lg:text-center md:text-start md:pl-10 text-center font-semibold font-serif mt-8 text-3xl">Phone Shop <span
+                class="text-red-500">Roni 20<span class="text-gray-800">24</span></span> </h1>
+                
+        <h4 class=" lg:pl-52 md:pl-10  lg:text-start md:text-start text-center p-4  font-serif mt-4 text-2xl">All Phone Product <span
+                class="text-red-500">Shop: <br></span><small> I phone , Samsung , Oppo , iPad , Nova <br>Reno , Walton , Vivo , Nokia , Redmi , Itel , Wath </small> </h4>
+                
+    </header>
+    <main class="container mx-auto mt-2">
+        <section class="lg:text-end md:text-end lg:p-4 md:p-4 p-8 lg:space-x-4 md:space-x-2 space-x-2">
+            <input id="search-field" type="Search" placeholder="...Search"
+                class="input input-bordered input-success lg:w-full md:w-full w-64 max-w-xs"/>
+            <button onclick="hendalSearch()" class="btn btn-outline btn-success">Search</button>
+            </section>
+            <!-- search result -->
+            <section>
+                <!-- loding/spiner -->
+                <div id="loading-spinner" class="text-center my-40 hidden">
+                    <span class="loading loading-spinner text-primary"></span>
+                </div>
+                <!-- phone section -->
+                <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+                </div>
+                <div id="Show-all" class="hidden mt-4 p-4 text-center">
+                    <button onclick="showAll()" class="btn btn-outline btn-success ">Show All</button>
+
+                </div>
+            </section>
+            <!-- show details modal  -->
+            <section>
+                <!-- Open the modal using ID.showModal() method -->
+                <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle lg:mx-auto lg:w-auto md:mx-auto md:w-auto mx-auto w-80">
+                    <form method="dialog" class="modal-box">
+                        <h3 id="phone-details-name" class="font-bold lg:text-3xl md:text-2xl text-xl"></h3>
+                        <div id="show-details-container"></div>
+                        <div class="modal-action">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+            </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
