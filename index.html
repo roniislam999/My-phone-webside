@@ -7,51 +7,65 @@
     <title>Hunting Phone API</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon"
+        href="https://cdn.icon-icons.com/icons2/3332/PNG/96/smartphone_chat_message_mobile_phone_love_heart_icon_209859.png"
+        type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <h1 class=" text-black-300 lg:text-center md:text-start md:pl-10 text-center font-semibold font-serif mt-8 text-3xl">Phone Shop <span
-                class="text-red-500">Roni 20<span class="text-gray-800">24</span></span> </h1>
-                
-        <h4 class=" lg:pl-52 md:pl-10  lg:text-start md:text-start text-center p-4  font-serif mt-4 text-2xl">All Phone Product <span
-                class="text-red-500">Shop: <br></span><small> I phone , Samsung , Oppo , iPad , Nova <br>Reno , Walton , Vivo , Nokia , Redmi , Itel , Wath </small> </h4>
-                
-    </header>
-    <main class="container mx-auto mt-2">
-        <section class="lg:text-end md:text-end lg:p-4 md:p-4 p-8 lg:space-x-4 md:space-x-2 space-x-2">
-            <input id="search-field" type="Search" placeholder="...Search"
-                class="input input-bordered input-success lg:w-full md:w-full w-64 max-w-xs"/>
-            <button onclick="hendalSearch()" class="btn btn-outline btn-success">Search</button>
-            </section>
-            <!-- search result -->
-            <section>
-                <!-- loding/spiner -->
-                <div id="loading-spinner" class="text-center my-40 hidden">
-                    <span class="loading loading-spinner text-primary"></span>
-                </div>
-                <!-- phone section -->
-                <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-                </div>
-                <div id="Show-all" class="hidden mt-4 p-4 text-center">
-                    <button onclick="showAll()" class="btn btn-outline btn-success ">Show All</button>
+        <h1
+            class=" text-black-300 lg:text-center md:text-start md:pl-4  text-center font-semibold font-serif mt-8 text-3xl">
+            Phone Shop <span class="text-red-500">Roni 20<span class="text-gray-800">24</span></span> </h1>
+        <div class="flex lg:pl-80 md:p-4 p-4 lg:space-x-8 md:space-x-4 space-x-3 mt-4">
+            
+            <div class="lg:w-40 md:w-32 w-32">
+                <img src="image/roni1_edited.jpg" alt="">
+            </div>
+            <div class="lg:pt-8 md:pt-4 pt-0">
 
-                </div>
-            </section>
-            <!-- show details modal  -->
-            <section>
-                <!-- Open the modal using ID.showModal() method -->
-                <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle lg:mx-auto lg:w-auto md:mx-auto md:w-auto mx-auto w-80">
-                    <form method="dialog" class="modal-box">
-                        <h3 id="phone-details-name" class="font-bold lg:text-3xl md:text-2xl text-xl"></h3>
-                        <div id="show-details-container"></div>
-                        <div class="modal-action">
-                            <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn">Close</button>
-                        </div>
-                    </form>
-                </dialog>
-            </section>
+                <h4 class="lg:text-start md:text-start  font-serif  lg:text-3xl md:text-2xl text-xl">
+                    All Phone Product <span class="text-red-500">Shop: <br></span><small> I phone , Samsung , Oppo ,
+                        iPad , Nova <br>Reno , Walton , Vivo , Nokia , Redmi , Itel , Wath </small> </h4>
+            </div>
+        </div>
+
+    </header>
+    <main class="container mx-auto">
+        <section class="lg:text-end md:text-end lg:p-4 md:p-4 pl-8 pt-4 lg:space-x-4 md:space-x-2 space-x-1">
+            <input id="search-field" type="Search" placeholder="Search..."
+                class="input input-bordered input-success lg:w-full md:w-full w-64 max-w-xs" />
+            <button onclick="hendalSearch()" class="btn btn-outline btn-success">Search</button>
+        </section>
+        <!-- search result -->
+        <section>
+            <!-- loding/spiner -->
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner text-primary"></span>
+            </div>
+            <!-- phone section -->
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+            </div>
+            <div id="Show-all" class="hidden mt-4 p-4 text-center">
+                <button onclick="showAll()" class="btn btn-outline btn-success ">Show All</button>
+
+            </div>
+        </section>
+        <!-- show details modal  -->
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="show_details_modal"
+                class="modal modal-bottom sm:modal-middle lg:mx-auto lg:w-auto md:mx-auto md:w-auto mx-auto w-80">
+                <form method="dialog" class="modal-box">
+                    <h3 id="phone-details-name" class="font-bold lg:text-3xl md:text-2xl text-xl"></h3>
+                    <div id="show-details-container"></div>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
     </main>
     <footer>
 
